@@ -171,6 +171,23 @@ module.exports = class Romanizer {
         '、': ', ',
         '，': ', ',
         '。': '. ',
+        'ー': '-',
+        '〜': '~',
+        '＿': '_',
+        '＝': '=',
+        '？': '?',
+        '！': '!',
+        '（': '(',
+        '）': ')',
+        '「': '[',
+        '」': ']',
+        '＃': '#',
+        '＄': '$',
+        '％': '%',
+        '＆': '%',
+        '＾': '^',
+        '＋': '+',
+        '＠': '@',
         'ぁ': 'a',
         'ぃ': 'i',
         'ぅ': 'u',
@@ -264,8 +281,8 @@ module.exports = class Romanizer {
      */
     getRomanChar(text, i, char, romanText) {
         let romanChar = char;
-
-        if (char === 'ー') {
+        if (false) {
+        // if (char === 'ー') {
             romanChar = romanText[romanText.length - 1];
         } else if (char === 'っ') {
             return '';
