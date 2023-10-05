@@ -423,7 +423,7 @@ module.exports = class Romanizer {
     }
 
       kanaToHira(text) {
-        const str = text.replace(/\t+/g, ' ');
+        const str = text.trim().replace(/\s+/g, ' ');
         return str.replace(/[\u30a1-\u30f6]/g, function (match) {
             const chr = match.charCodeAt(0) - 0x60;
             return String.fromCharCode(chr);
